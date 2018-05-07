@@ -3,6 +3,7 @@ The prime factors of 13195 are 5, 7, 13 and 29.
 
 What is the largest prime factor of the number 600851475143 ?
 '''
+from math import sqrt
 
 n = 600851475143
 
@@ -11,7 +12,7 @@ def isprime(n):
         raise ValueError, 'can only check primes greater than 1'
     # Basic isprime function
     i = 2
-    while i < n:
+    while i <= sqrt(n):
         if (n % i) == 0:
             return False
         i += 1
@@ -42,4 +43,4 @@ def LargestPrime(n):
             if (i-1 >= n): return i
         else: i+=1
 
-print 'LargestPrime of 21 ', LargestPrime(600851475143)
+# print 'LargestPrime of 21 ', LargestPrime(600851475143)
